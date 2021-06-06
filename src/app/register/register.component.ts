@@ -24,6 +24,9 @@ registerUser(){
   this.registerService.registerUser(this.register).subscribe(
     response => {
       alert('User ' + this.register.username + ' has been created')
+      this.register.username = '',
+      this.register.password = '',
+      this.register.email = ''
     },
     error => console.log('error', error)
   );
