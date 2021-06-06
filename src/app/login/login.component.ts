@@ -22,9 +22,10 @@ export class LoginComponent implements OnInit {
   onLogin(){
     this.loginservice.loginUser(this.input).subscribe(
       response => {
+        console.log(response)
         alert('User ' + this.input.username + ' has been loged in')
         this.input.username = '',
-        this.input.password = '',
+        this.input.password = ''
       },
       error => console.log('error', error)
     );
