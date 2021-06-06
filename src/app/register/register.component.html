@@ -1,6 +1,31 @@
-<div class="text-center">
-  <input [(ngModel)]="register.username" placeholder="username" ><br>
-  <input [(ngModel)]="register.password" placeholder="password" type="password"><br>
-  <input [(ngModel)]="register.email" placeholder="email"><br>
-  <button (click)='registerUser()'>Sign up</button>
+
+<div class="container">
+  <div class="forms-container">
+    
+    <div class="signin-signup form-group">
+
+
+  <input class="form-control" [(ngModel)]="register.username" placeholder="username" ><br>
+  <input class="form-control" [(ngModel)]="register.password" placeholder="password" type="password"><br>
+  <input class="form-control" [(ngModel)]="register.email" placeholder="email"><br>
+  <button class="btn btn-primary" (click)='registerUser()'>Sign up</button>
+
+    </div>
+  </div>
+
+  <div class="panels-container">
+    <div class="panel left-panel">
+      <div class="content">
+        <h3>One of us ?</h3>
+        <p>
+        Proceed to the login page and log in to your account
+        </p>
+        <a href="#"><button class="btn transparent" id="sign-up-btn">
+          Log in
+        </button> </a>
+      </div>
+      <img src=  "#" class="image" alt="" />
+    </div>
+
+  </div>
 </div>
