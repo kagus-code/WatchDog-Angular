@@ -10,7 +10,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ShowProfileComponent } from './profile/show-profile/show-profile.component';
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 import { SharedService } from './shared.service';
-import { LandingComponent } from './landing/landing.component'
+import { LandingComponent } from './landing/landing.component';
+import { HoodComponent } from './hood/hood.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LandingComponent } from './landing/landing.component'
     ProfileComponent,
     ShowProfileComponent,
     EditProfileComponent,
-    LandingComponent
+    LandingComponent,
+    HoodComponent
   ],
   imports: [
     BrowserModule,
