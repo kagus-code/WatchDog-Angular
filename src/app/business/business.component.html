@@ -1,1 +1,50 @@
-<p>business works!</p>
+
+
+
+
+<nav>
+  <ul>
+    <li class="logo">Watch-Dog </li>
+    <li class="logo" > <a class="" href="/landing">Home</a> </li>
+    <div class="items">
+      <li class=" ">
+        <a class="" href="#"><i class="fa fa-plus" aria-hidden="true"></i> business</a>
+      </li>
+      <li class=" ">
+        <a class="" href="/hood">Hoods</a>
+      </li>
+      <li class=" ">
+        <a class="" href="#">Profile</a>
+      </li>
+      
+    </div>
+  
+  </ul>
+</nav>
+<br>
+
+<div class="container mt-5"  *ngFor="let biz of BusinessList">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-8">
+          <div class="bg-effects">
+            <h2 class="card-title">{{biz.name}}</h2>
+            <p>{{biz.id}}</p>
+          </div>
+          <ul>
+            <li>Location :-<span>{{biz.neighbourhood}}</span></li>
+            <li>User:-<span>{{biz.user}}</span></li>
+            <li>Emails :-<span>{{biz.email}}</span></li>
+          </ul>
+        </div>
+        <div class="col-4 pl-0">
+                 <p>{{biz.description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-custom">
+      <p>Visit Now :-<span> {{biz.name}}.com</span></p>
+    </div>
+  </div>
+</div>

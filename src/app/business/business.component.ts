@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {SharedService} from 'src/app/shared.service'
 
 @Component({
   selector: 'app-business',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private service: SharedService,
+    private router: Router
+  ) { }
+
+  BusinessList:any=[];
 
   ngOnInit(): void {
+    this.refreshBusinesslist();
+  }
+
+  refreshBusinesslist(){
+    this.service.getbusiness().subscribe(data=>{
+      this.BusinessList=data;
+    });
   }
 
 }

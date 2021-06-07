@@ -39,4 +39,15 @@ export class SharedService {
   deletebusiness(val:any){
     return this.http.delete(this.APIUrl + '/hood-get/'+ val);
   }
+
+
+  // user methods
+  getuser():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl + '/hood-post/');
+  }
+
+  updateuser(val:any){
+    return this.http.put(this.APIUrl + '/hood-get/',val);
+  }
+  
 }
