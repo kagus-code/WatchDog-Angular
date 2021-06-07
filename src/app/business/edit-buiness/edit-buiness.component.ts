@@ -18,12 +18,12 @@ export class EditBuinessComponent implements OnInit {
   neighbourhood:any;
 
   ngOnInit(): void {
-    this.id=this.id
-    this.name = this.name
-    this.description =this.description
-    this.email =this.email
-    this.user =this.user
-    this.neighbourhood = this.neighbourhood
+    this.id=this.biz.id;
+    this.name = this.biz.name;
+    this.description =this.biz.description;
+    this.email =this.biz.email;
+    this.user =this.biz.user;
+    this.neighbourhood = this.biz.neighbourhood;
   }
   addbusiness(){
     var val ={id:this.id,

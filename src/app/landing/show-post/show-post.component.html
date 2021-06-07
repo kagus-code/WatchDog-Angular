@@ -1,36 +1,14 @@
 
 
-
-
-<nav>
-  <ul>
-    <li class="logo">Watch-Dog </li>
-    <li class="logo" > <a class="" href="/landing">Home</a> </li>
-    <div class="items">
-      <li class=" ">
-   
-  <a>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-(click)="addClick()"
-data-backdrop="static" data-keyboard="false"
->
-<i class="fa fa-plus" aria-hidden="true"></i> post
-</button>
-</a>
-
-      </li>
-      <li class=" ">
-        <a class="" href="/hood">Hoods</a>
-      </li>
-      <li class=" ">
-        <a class="" href="#">Profile</a>
-      </li>
-      
-    </div>
-  
-  </ul>
-</nav>
+  <p class="text-center">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+    (click)="addClick()"
+    data-backdrop="static" data-keyboard="false"
+    >
+    <i class="fa fa-plus" aria-hidden="true"></i> post
+    </button>
+  </p>
 <br>
 
 <div class="container">
@@ -41,7 +19,7 @@ data-backdrop="static" data-keyboard="false"
       <div class="card border-info mb-3" style="max-width: 18rem;">
         <div class="card-header"><i class="fa fa-user" aria-hidden="true"></i> {{item.name}}</div>
         <div class="card-body text-info">
-          <h5 class="card-title"><i class="fa fa-calendar" aria-hidden="true"></i>{{item.date}}</h5>
+          <h5 class="card-title"><i class="fa fa-calendar" aria-hidden="true"></i>{{item.date  | date}}</h5>
           <p class="card-text"><i class="fa fa-comments" aria-hidden="true"></i>{{item.post}}</p>
         </div>
       </div>
@@ -62,7 +40,7 @@ data-backdrop="static" data-keyboard="false"
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title : {{ ModalTitle }}</h5>
+        <h5 class="modal-title" id="exampleModalLabel"> {{ ModalTitle }}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"
         (click)="closeClick"
         >
@@ -70,7 +48,7 @@ data-backdrop="static" data-keyboard="false"
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-post *ngIf="ActivateAddEditPostComp" [post]=Post >
+        <app-add-edit-post *ngIf="ActivateAddEditPostComp" [postObj]=Post >
           
         </app-add-edit-post>
       </div>
