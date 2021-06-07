@@ -11,7 +11,10 @@ import { ShowProfileComponent } from './profile/show-profile/show-profile.compon
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 import { SharedService } from './shared.service';
 import { LandingComponent } from './landing/landing.component';
-import { HoodComponent } from './hood/hood.component'
+import { HoodComponent } from './hood/hood.component';
+import { BusinessComponent } from './business/business.component';
+import { AddBuinessComponent } from './business/add-buiness/add-buiness.component';
+import { EditBuinessComponent } from './business/edit-buiness/edit-buiness.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { HoodComponent } from './hood/hood.component'
     ShowProfileComponent,
     EditProfileComponent,
     LandingComponent,
-    HoodComponent
+    HoodComponent,
+    BusinessComponent,
+    AddBuinessComponent,
+    EditBuinessComponent
   ],
   imports: [
     BrowserModule,

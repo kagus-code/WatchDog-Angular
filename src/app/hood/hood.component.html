@@ -25,12 +25,15 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" *ngFor="let hood of HoodList">
       <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">Header</div>
+        <div class="card-header">hood {{hood.id}} <p class="text-center">{{hood.name}}</p></div>
         <div class="card-body">
-          <h5 class="card-title">Dark card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">{{hood.location}}</h5>
+          <p class="card-text">police contact {{hood.police_contact}}</p>
+          <p class="card-text">police contact {{hood.health_contact}}</p>
+          <p class="card-text">Population {{hood.occupants_count}}</p>
+          <a href="#" class="btn btn-primary">Edit hood</a>
         </div>
       </div>
     </div>
