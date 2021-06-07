@@ -8,7 +8,17 @@
     <li class="logo" > <a class="" href="/landing">Home</a> </li>
     <div class="items">
       <li class=" ">
-        <a class="" href="#"><i class="fa fa-plus" aria-hidden="true"></i> business</a>
+   
+  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+(click)="addClick()"
+data-backdrop="static" data-keyboard="false"
+>
+<i class="fa fa-plus" aria-hidden="true"></i> business
+</button>
+
+
       </li>
       <li class=" ">
         <a class="" href="/hood">Hoods</a>
@@ -23,28 +33,60 @@
 </nav>
 <br>
 
-<div class="container mt-5"  *ngFor="let biz of BusinessList">
+<div class="container mt-5"  *ngFor="let item of BusinessList">
   <div class="card">
     <div class="card-body">
       <div class="row">
         <div class="col-8">
           <div class="bg-effects">
-            <h2 class="card-title">{{biz.name}}</h2>
-            <p>{{biz.id}}</p>
+            <h2 class="card-title">{{item.name}}</h2>
+            <p>{{item.id}}</p>
           </div>
           <ul>
-            <li>Location :-<span>{{biz.neighbourhood}}</span></li>
-            <li>User:-<span>{{biz.user}}</span></li>
-            <li>Emails :-<span>{{biz.email}}</span></li>
+            <li>Location :-<span>{{item.neighbourhood}}</span></li>
+            <li>User:-<span>{{item.user}}</span></li>
+            <li>Emails :-<span>{{item.email}}</span></li>
           </ul>
         </div>
         <div class="col-4 pl-0">
-                 <p>{{biz.description}}</p>
+                 <p>{{item.description}}</p>
         </div>
       </div>
     </div>
     <div class="bg-custom">
-      <p>Visit Now :-<span> {{biz.name}}.com</span></p>
+      <p>Visit Now :-<span> {{item.name}}.com</span></p>
+      <p><span><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+        (click)="editClick(item)"
+        data-backdrop="static" data-keyboard="false"
+        >
+        <i class="fa fa-plus" aria-hidden="true"></i> business
+        </button></span></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title : {{ ModalTitle }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+        (click)="closeClick"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-edit-buiness *ngIf="ActivateAddEditBizComp" [biz]=Biz >
+          
+        </app-edit-buiness>
+      </div>
+ 
     </div>
   </div>
 </div>

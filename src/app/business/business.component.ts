@@ -15,10 +15,46 @@ export class BusinessComponent implements OnInit {
   ) { }
 
   BusinessList:any=[];
+  
+
+  ModalTitle: any;
+  ActivateAddEditBizComp:boolean=false;
+  Biz:any=[]
 
   ngOnInit(): void {
     this.refreshBusinesslist();
   }
+
+  addClick(){
+    this.Biz ={
+      id:0,
+      name:"",
+      description:"",
+      email:"",
+      user:0,
+      neighbourhood:0
+
+    }
+  this.ModalTitle ="Add business"
+  this.ActivateAddEditBizComp = true;
+  }
+
+  editClick(item:any){
+    this.Biz = item;
+    this.ModalTitle = "Edit business"
+    this.ActivateAddEditBizComp = true;
+
+  }
+
+  closeClick(){
+    this.ActivateAddEditBizComp=false;
+    this.refreshBusinesslist()
+
+  }
+
+
+
+  
 
   refreshBusinesslist(){
     this.service.getbusiness().subscribe(data=>{
