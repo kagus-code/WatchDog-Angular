@@ -17,10 +17,26 @@ export class SharedService {
     return this.http.post(this.APIUrl + '/hood-post/',val);
   }
   updatehood(val:any){
-    return this.http.put(this.APIUrl + '/hood-post/',val);
+    return this.http.put(this.APIUrl + '/hood-get/',val);
   }
   deletehood(val:any){
     return this.http.delete(this.APIUrl + '/hood-get/'+ val);
   }
 
+
+  // business methods 
+
+  getbusiness():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl + '/business-post/');
+  }
+
+  addbusiness(val:any){
+    return this.http.post(this.APIUrl + '/business-post/',val);
+  }
+  updatebusiness(val:any){
+    return this.http.put(this.APIUrl + '/business-get/',val);
+  }
+  deletebusiness(val:any){
+    return this.http.delete(this.APIUrl + '/hood-get/'+ val);
+  }
 }
