@@ -14,7 +14,10 @@ import { LandingComponent } from './landing/landing.component';
 import { HoodComponent } from './hood/hood.component';
 import { BusinessComponent } from './business/business.component';
 import { AddBuinessComponent } from './business/add-buiness/add-buiness.component';
-import { EditBuinessComponent } from './business/edit-buiness/edit-buiness.component'
+import { EditBuinessComponent } from './business/edit-buiness/edit-buiness.component';
+import { PostComponent } from './post/post.component';
+import { ShowPostComponent } from './landing/show-post/show-post.component';
+import { AddEditPostComponent } from './landing/add-edit-post/add-edit-post.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { EditBuinessComponent } from './business/edit-buiness/edit-buiness.compo
     HoodComponent,
     BusinessComponent,
     AddBuinessComponent,
-    EditBuinessComponent
+    EditBuinessComponent,
+    PostComponent,
+    ShowPostComponent,
+    AddEditPostComponent
   ],
   imports: [
     BrowserModule,

@@ -49,5 +49,23 @@ export class SharedService {
   updateuser(val:any){
     return this.http.put(this.APIUrl + '/user-get/',val);
   }
+
+
+
+    // post methods 
+
+    getPost():Observable<any[]>{
+      return this.http.get<any[]>(this.APIUrl + '/post-post/');
+    }
+  
+    addPost(val:any){
+      return this.http.post(this.APIUrl + '/post-post/',val);
+    }
+    updatePost(val:any){
+      return this.http.put(this.APIUrl + '/post-get/',val);
+    }
+    deletePost(val:any){
+      return this.http.delete(this.APIUrl + '/post-get/'+ val);
+    }
   
 }
