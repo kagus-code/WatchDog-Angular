@@ -48,11 +48,18 @@ export class BusinessComponent implements OnInit {
 
   closeClick(){
     this.ActivateAddEditBizComp=false;
-    this.refreshBusinesslist()
-
+    this.refreshBusinesslist();
   }
 
+deleteClick(item:any){
+  if(confirm("Are you sure you want to delete this business"))
+  this.service.deletebusiness(item.id).subscribe(data=>{
+    alert("deleted succesfully");
+    this.refreshBusinesslist();
+  });
 
+
+}
 
   
 

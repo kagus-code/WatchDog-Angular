@@ -9,7 +9,7 @@
     <div class="items">
       <li class=" ">
    
-  
+  <a>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
 (click)="addClick()"
@@ -17,7 +17,7 @@ data-backdrop="static" data-keyboard="false"
 >
 <i class="fa fa-plus" aria-hidden="true"></i> business
 </button>
-
+</a>
 
       </li>
       <li class=" ">
@@ -49,18 +49,13 @@ data-backdrop="static" data-keyboard="false"
           </ul>
         </div>
         <div class="col-4 pl-0">
-                 <p>{{item.description}}</p>
+       <p>{{item.description}}</p>
         </div>
       </div>
     </div>
     <div class="bg-custom">
       <p>Visit Now :-<span> {{item.name}}.com</span></p>
-      <p><span><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-        (click)="editClick(item)"
-        data-backdrop="static" data-keyboard="false"
-        >
-        <i class="fa fa-plus" aria-hidden="true"></i> business
-        </button></span></p>
+      <p><span><button type="button" class="btn btn-danger"(click)="deleteClick(item)"><i class="fa fa-trash" aria-hidden="true"></i></button></span></p>
     </div>
   </div>
 </div>

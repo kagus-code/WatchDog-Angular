@@ -37,17 +37,17 @@ export class SharedService {
     return this.http.put(this.APIUrl + '/business-get/',val);
   }
   deletebusiness(val:any){
-    return this.http.delete(this.APIUrl + '/hood-get/'+ val);
+    return this.http.delete(this.APIUrl + '/business-get/'+ val);
   }
 
 
   // user methods
   getuser():Observable<any[]>{
-    return this.http.get<any[]>(this.APIUrl + '/hood-post/');
+    return this.http.get<any[]>(this.APIUrl + '/user-post/');
   }
 
   updateuser(val:any){
-    return this.http.put(this.APIUrl + '/hood-get/',val);
+    return this.http.put(this.APIUrl + '/user-get/',val);
   }
   
 }
