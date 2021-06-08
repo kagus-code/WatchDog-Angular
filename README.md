@@ -39,7 +39,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## link to live site on GitHub Pages
 
-
+https://kagus-code.github.io/WatchDog-Angular/
 
 ## Support and contact details
 
