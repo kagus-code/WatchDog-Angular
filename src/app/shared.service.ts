@@ -6,7 +6,7 @@ import {Observable} from 'rxjs'
   providedIn: 'root'
 })
 export class SharedService {
-  readonly APIUrl = "http://127.0.0.1:8000"
+  readonly APIUrl = "https://kagus-watchdog.herokuapp.com"
 
   constructor(private http:HttpClient) { }
   gethood():Observable<any[]>{
