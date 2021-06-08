@@ -54,7 +54,13 @@
     </div>
     <div class="bg-custom">
       <p>Visit Now :-<span> {{item.name}}.com</span></p>
-      <p><span><button type="button" class="btn btn-danger"(click)="deleteClick(item)"><i class="fa fa-trash" aria-hidden="true"></i></button></span></p>
+      <p><span><button type="button" class="btn btn-danger"(click)="deleteClick(item)"><i class="fa fa-trash" aria-hidden="true"></i></button></span>
+        &nbsp; 
+        <span><button type="button" class="btn btn-success"(click)="editClick(item)"
+          data-toggle="modal" data-target="#exampleModal"
+          data-backdrop="static" data-keyboard="false"
+          ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></span>
+      </p>
     </div>
   </div>
 </div>

@@ -34,7 +34,7 @@ export class SharedService {
     return this.http.post(this.APIUrl + '/business-post/',val);
   }
   updatebusiness(val:any){
-    return this.http.put(this.APIUrl + '/business-get/',val);
+    return this.http.put(this.APIUrl + '/business-post/',val);
   }
   deletebusiness(val:any){
     return this.http.delete(this.APIUrl + '/business-get/'+ val);
