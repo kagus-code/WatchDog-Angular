@@ -39,7 +39,7 @@ this.loadHoodList();
              post:this.post,
             
              user:this.user,
-             hood: this.hood
+             hood: this.hood.id
                };
                this.service.addPost(val).subscribe(res=>{
                  alert("Post has been added");

@@ -30,8 +30,8 @@ export class EditBuinessComponent implements OnInit {
              name:this.name,
              description:this.description,
              email:this.email,
-             user:this.user,
-             neighbourhood: this.neighbourhood
+             user:this.user.id,
+             neighbourhood: this.neighbourhood.id
                };
                this.service.addbusiness(val).subscribe(res=>{
                  alert("business has been added");

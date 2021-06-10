@@ -10,6 +10,6 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   loginUser(userData:any):Observable<any> {
-    return this.http.post('https://kagus-watchdog.herokuapp.com/api-token-auth/', userData)
+    return this.http.post('http://127.0.0.1:8000/api-token-auth/', userData)
   }
 }
